@@ -183,11 +183,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
          resetVisibleIndex()
+        
+         // force the content to scoll into middle row
+         self.tableView.scrollToRow(at: currentlyPlayingIndex, at: .middle, animated: true)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         resetVisibleIndex()
+        
+        // force the content to scoll into middle
+        self.tableView.scrollToRow(at: currentlyPlayingIndex, at: .middle, animated: true)
+        
+        
     }
+ 
     
     func updateCurrentIndex() -> IndexPath? {
         //when scroll end get the current display off set
