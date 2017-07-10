@@ -1,0 +1,6 @@
+framework module Pods_VideoTable {
+  umbrella header "Pods-VideoTable-umbrella.h"
+
+  export *
+  module * { export * }
+}

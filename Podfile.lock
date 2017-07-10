@@ -1,0 +1,29 @@
+PODS:
+  - Dotzu (1.8)
+  - EZPlayer (0.0.2)
+  - Material (2.6.3):
+    - Material/Core (= 2.6.3)
+  - Material/Core (2.6.3)
+  - NVActivityIndicatorView (3.6.1)
+  - SnapKit (3.2.0)
+  - TweenKit (0.2.1)
+
+DEPENDENCIES:
+  - Dotzu
+  - EZPlayer
+  - Material
+  - NVActivityIndicatorView
+  - SnapKit
+  - TweenKit
+
+SPEC CHECKSUMS:
+  Dotzu: e787896f08474f4e4574baa20ec556361dfebf0c
+  EZPlayer: 79a294f185982f1598a023e9d2ec973a01b7f77c
+  Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  TweenKit: 7a644843b8f1ba0e98e703085084e15d7dc2ff5b
+
+PODFILE CHECKSUM: 04ce41148b4087dd8154326b51ecf7cd70d79597
+
+COCOAPODS: 1.2.1

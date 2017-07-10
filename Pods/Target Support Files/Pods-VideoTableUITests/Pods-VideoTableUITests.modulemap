@@ -1,0 +1,6 @@
+framework module Pods_VideoTableUITests {
+  umbrella header "Pods-VideoTableUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

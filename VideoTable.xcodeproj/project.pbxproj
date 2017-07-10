@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1743FF751EEBF0EB0046887E /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743FF741EEBF0EB0046887E /* UIFactory.swift */; };
+		1743FF771EEBF7B50046887E /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1743FF761EEBF7B50046887E /* placeholder.jpg */; };
+		1749B7201EEB5CBA00DC0057 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749B71E1EEB5CBA00DC0057 /* MediaManager.swift */; };
+		1749B7231EEB7B2F00DC0057 /* VideoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */; };
+		1749B7251EEBEE7000DC0057 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749B7241EEBEE7000DC0057 /* Extensions.swift */; };
 		17C660961EE5E111001E21E1 /* PlayerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C660951EE5E111001E21E1 /* PlayerLayout.swift */; };
-		840424D51E8F0ABA00EA1E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840424D31E8F0ABA00EA1E6B /* Main.storyboard */; };
+		3F58BB78DB038B6803A42BB5 /* Pods_VideoTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE821AB765A2AF2D97F79D7 /* Pods_VideoTable.framework */; };
 		84499C3E1E8D8D84007266FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84499C3D1E8D8D84007266FA /* AppDelegate.swift */; };
 		84499C401E8D8D84007266FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84499C3F1E8D8D84007266FA /* ViewController.swift */; };
 		84499C451E8D8D84007266FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84499C441E8D8D84007266FA /* Assets.xcassets */; };
@@ -18,8 +23,8 @@
 		84499C6D1E8D8DBE007266FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84499C6C1E8D8DBE007266FA /* AVFoundation.framework */; };
 		84499C6F1E8D8DC2007266FA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84499C6E1E8D8DC2007266FA /* AVKit.framework */; };
 		84499C711E8D8DD5007266FA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84499C701E8D8DD5007266FA /* MediaPlayer.framework */; };
-		84499C731E8D8FDA007266FA /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84499C721E8D8FDA007266FA /* VideoTableViewCell.swift */; };
-		84499C751E8D8FF6007266FA /* VideoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84499C741E8D8FF6007266FA /* VideoCellView.xib */; };
+		CBE6F6FA6E59F0E02B224B67 /* Pods_VideoTableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59A7D4D08789A19DB8E1482 /* Pods_VideoTableTests.framework */; };
+		DE42AED875A1808D2E71D5B4 /* Pods_VideoTableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD429B3E2490A0475745ED7 /* Pods_VideoTableUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1743FF741EEBF0EB0046887E /* UIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
+		1743FF761EEBF7B50046887E /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		1749B71E1EEB5CBA00DC0057 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoItemTableViewCell.swift; sourceTree = "<group>"; };
+		1749B7241EEBEE7000DC0057 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		17C660951EE5E111001E21E1 /* PlayerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLayout.swift; sourceTree = "<group>"; };
-		840424D41E8F0ABA00EA1E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C1FA45300398A391F99C329 /* Pods-VideoTableUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTableUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTableUITests/Pods-VideoTableUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D910DB378B932E205597F08 /* Pods-VideoTableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTableTests/Pods-VideoTableTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84499C3A1E8D8D84007266FA /* VideoTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84499C3D1E8D8D84007266FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84499C3F1E8D8D84007266FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +68,13 @@
 		84499C6C1E8D8DBE007266FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84499C6E1E8D8DC2007266FA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		84499C701E8D8DD5007266FA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		84499C721E8D8FDA007266FA /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
-		84499C741E8D8FF6007266FA /* VideoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCellView.xib; sourceTree = "<group>"; };
+		8ADA74B2DEFF65A7D0364E89 /* Pods-VideoTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTable/Pods-VideoTable.release.xcconfig"; sourceTree = "<group>"; };
+		9C1FB798449F942E82C6FF5F /* Pods-VideoTableUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTableUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTableUITests/Pods-VideoTableUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE821AB765A2AF2D97F79D7 /* Pods_VideoTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30A3F2DA393953A255126B4 /* Pods-VideoTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTable/Pods-VideoTable.debug.xcconfig"; sourceTree = "<group>"; };
+		B59A7D4D08789A19DB8E1482 /* Pods_VideoTableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD429B3E2490A0475745ED7 /* Pods_VideoTableUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTableUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC4360DBA43D7A6F22AB70D /* Pods-VideoTableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTableTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTableTests/Pods-VideoTableTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +85,7 @@
 				84499C711E8D8DD5007266FA /* MediaPlayer.framework in Frameworks */,
 				84499C6F1E8D8DC2007266FA /* AVKit.framework in Frameworks */,
 				84499C6D1E8D8DBE007266FA /* AVFoundation.framework in Frameworks */,
+				3F58BB78DB038B6803A42BB5 /* Pods_VideoTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE6F6FA6E59F0E02B224B67 /* Pods_VideoTableTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE42AED875A1808D2E71D5B4 /* Pods_VideoTableUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +116,7 @@
 				84499C5C1E8D8D84007266FA /* VideoTableUITests */,
 				84499C3B1E8D8D84007266FA /* Products */,
 				84499C6B1E8D8DBE007266FA /* Frameworks */,
+				8D6B96A508DDD8AA4CB1AEDB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,15 +133,17 @@
 		84499C3C1E8D8D84007266FA /* VideoTable */ = {
 			isa = PBXGroup;
 			children = (
+				1743FF761EEBF7B50046887E /* placeholder.jpg */,
+				1749B71E1EEB5CBA00DC0057 /* MediaManager.swift */,
 				84499C3D1E8D8D84007266FA /* AppDelegate.swift */,
 				84499C3F1E8D8D84007266FA /* ViewController.swift */,
 				84499C441E8D8D84007266FA /* Assets.xcassets */,
-				840424D31E8F0ABA00EA1E6B /* Main.storyboard */,
 				84499C461E8D8D84007266FA /* LaunchScreen.storyboard */,
 				84499C491E8D8D84007266FA /* Info.plist */,
-				84499C721E8D8FDA007266FA /* VideoTableViewCell.swift */,
-				84499C741E8D8FF6007266FA /* VideoCellView.xib */,
+				1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */,
 				17C660951EE5E111001E21E1 /* PlayerLayout.swift */,
+				1749B7241EEBEE7000DC0057 /* Extensions.swift */,
+				1743FF741EEBF0EB0046887E /* UIFactory.swift */,
 			);
 			path = VideoTable;
 			sourceTree = "<group>";
@@ -150,8 +172,24 @@
 				84499C701E8D8DD5007266FA /* MediaPlayer.framework */,
 				84499C6E1E8D8DC2007266FA /* AVKit.framework */,
 				84499C6C1E8D8DBE007266FA /* AVFoundation.framework */,
+				ABE821AB765A2AF2D97F79D7 /* Pods_VideoTable.framework */,
+				B59A7D4D08789A19DB8E1482 /* Pods_VideoTableTests.framework */,
+				EBD429B3E2490A0475745ED7 /* Pods_VideoTableUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D6B96A508DDD8AA4CB1AEDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B30A3F2DA393953A255126B4 /* Pods-VideoTable.debug.xcconfig */,
+				8ADA74B2DEFF65A7D0364E89 /* Pods-VideoTable.release.xcconfig */,
+				4D910DB378B932E205597F08 /* Pods-VideoTableTests.debug.xcconfig */,
+				FCC4360DBA43D7A6F22AB70D /* Pods-VideoTableTests.release.xcconfig */,
+				9C1FB798449F942E82C6FF5F /* Pods-VideoTableUITests.debug.xcconfig */,
+				3C1FA45300398A391F99C329 /* Pods-VideoTableUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84499C621E8D8D85007266FA /* Build configuration list for PBXNativeTarget "VideoTable" */;
 			buildPhases = (
+				262E2F63FBD2100B4DB626AA /* [CP] Check Pods Manifest.lock */,
 				84499C361E8D8D84007266FA /* Sources */,
 				84499C371E8D8D84007266FA /* Frameworks */,
 				84499C381E8D8D84007266FA /* Resources */,
+				58BC571CE909535FF508EC42 /* [CP] Embed Pods Frameworks */,
+				8FB6A75D624183F4B360C4FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84499C651E8D8D85007266FA /* Build configuration list for PBXNativeTarget "VideoTableTests" */;
 			buildPhases = (
+				BFC91DFF2B82A51471D11B94 /* [CP] Check Pods Manifest.lock */,
 				84499C4A1E8D8D84007266FA /* Sources */,
 				84499C4B1E8D8D84007266FA /* Frameworks */,
 				84499C4C1E8D8D84007266FA /* Resources */,
+				C5C186C1E15F1C2F291CC1D9 /* [CP] Embed Pods Frameworks */,
+				E0FDFA19C517AC184D14DCF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84499C681E8D8D85007266FA /* Build configuration list for PBXNativeTarget "VideoTableUITests" */;
 			buildPhases = (
+				DB7FE5F659C2EFD92BBC8EB8 /* [CP] Check Pods Manifest.lock */,
 				84499C551E8D8D84007266FA /* Sources */,
 				84499C561E8D8D84007266FA /* Frameworks */,
 				84499C571E8D8D84007266FA /* Resources */,
+				569C73C31E51537084444689 /* [CP] Embed Pods Frameworks */,
+				6DA5B7A27D05A330598179B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +269,7 @@
 				TargetAttributes = {
 					84499C391E8D8D84007266FA = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WMDZ2CQA8K;
 						ProvisioningStyle = Automatic;
 					};
 					84499C4D1E8D8D84007266FA = {
@@ -261,10 +309,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84499C751E8D8FF6007266FA /* VideoCellView.xib in Resources */,
 				84499C481E8D8D84007266FA /* LaunchScreen.storyboard in Resources */,
+				1743FF771EEBF7B50046887E /* placeholder.jpg in Resources */,
 				84499C451E8D8D84007266FA /* Assets.xcassets in Resources */,
-				840424D51E8F0ABA00EA1E6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +331,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		262E2F63FBD2100B4DB626AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		569C73C31E51537084444689 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoTableUITests/Pods-VideoTableUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58BC571CE909535FF508EC42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoTable/Pods-VideoTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DA5B7A27D05A330598179B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoTableUITests/Pods-VideoTableUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FB6A75D624183F4B360C4FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoTable/Pods-VideoTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFC91DFF2B82A51471D11B94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C186C1E15F1C2F291CC1D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoTableTests/Pods-VideoTableTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB7FE5F659C2EFD92BBC8EB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0FDFA19C517AC184D14DCF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoTableTests/Pods-VideoTableTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84499C361E8D8D84007266FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1749B7231EEB7B2F00DC0057 /* VideoItemTableViewCell.swift in Sources */,
+				1749B7251EEBEE7000DC0057 /* Extensions.swift in Sources */,
 				17C660961EE5E111001E21E1 /* PlayerLayout.swift in Sources */,
 				84499C401E8D8D84007266FA /* ViewController.swift in Sources */,
+				1743FF751EEBF0EB0046887E /* UIFactory.swift in Sources */,
 				84499C3E1E8D8D84007266FA /* AppDelegate.swift in Sources */,
-				84499C731E8D8FDA007266FA /* VideoTableViewCell.swift in Sources */,
+				1749B7201EEB5CBA00DC0057 /* MediaManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,14 +516,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		840424D31E8F0ABA00EA1E6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				840424D41E8F0ABA00EA1E6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84499C461E8D8D84007266FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,8 +622,10 @@
 		};
 		84499C631E8D8D85007266FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30A3F2DA393953A255126B4 /* Pods-VideoTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WMDZ2CQA8K;
 				INFOPLIST_FILE = VideoTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.admin.VideoTable;
@@ -454,8 +636,10 @@
 		};
 		84499C641E8D8D85007266FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ADA74B2DEFF65A7D0364E89 /* Pods-VideoTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WMDZ2CQA8K;
 				INFOPLIST_FILE = VideoTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.admin.VideoTable;
@@ -466,6 +650,7 @@
 		};
 		84499C661E8D8D85007266FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D910DB378B932E205597F08 /* Pods-VideoTableTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +665,7 @@
 		};
 		84499C671E8D8D85007266FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC4360DBA43D7A6F22AB70D /* Pods-VideoTableTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +680,7 @@
 		};
 		84499C691E8D8D85007266FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C1FB798449F942E82C6FF5F /* Pods-VideoTableUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = VideoTableUITests/Info.plist;
@@ -507,6 +694,7 @@
 		};
 		84499C6A1E8D8D85007266FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C1FA45300398A391F99C329 /* Pods-VideoTableUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = VideoTableUITests/Info.plist;
