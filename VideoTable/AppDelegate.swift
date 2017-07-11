@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow.window()
-        let vc = ViewController()
-        let nc = UINavigationController(rootViewController: vc)
-        nc.navigationBar.isTranslucent = false
-        window?.rootViewController = nc
+        AppearanceService.shared.setGlobalAppearance()
+        let apexTabBarVC = ApexPlayerTabBarVC()
+        DataManager.shared.weakApexTabBarVC = apexTabBarVC
+        window?.rootViewController = apexTabBarVC
         window?.makeKeyAndVisible()
         
         return true

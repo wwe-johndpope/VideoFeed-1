@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tb
     }()
     
-    
+    var isFlicking = false
     let scheduler = ActionScheduler()
     var urls : [String] = []
 
@@ -38,10 +38,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.addObservers()
         
+        self.title = "Title"
+        
         // Snapkit layouts
         self.view.addSubview(myTableView)
         myTableView.separatorColor = .gray
-        myTableView.backgroundColor = .white
+        myTableView.backgroundColor = .black
         myTableView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         myTableView.snp.remakeConstraints { (make) -> Void in
             make.width.height.top.equalToSuperview()
@@ -49,6 +51,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTableView.register(VideoItemTableViewCell.self, forCellReuseIdentifier: VideoItemTableViewCell.ID)
         myTableView.dataSource = self
         myTableView.delegate = self
+        
+        self.view.backgroundColor = .black
         
         // init URLs
         urls = ["https://vziptvapi.azurewebsites.net/assets/stream/output/VZ_reConnect.mp4.m3u8",
@@ -125,6 +129,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        if(indexPath == currentlyPlayingIndex){
+            self.invalidateCurrentlyPlayingIndex()
+            MediaManager.shared.releasePlayer()
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.isFlicking = true
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndScrollingAnimation")
+        self.isFlicking = false
+    }
+    
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         scheduler.removeAll()
@@ -145,10 +166,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func smoothScroll(_ yOffset:CGFloat){
-        let pt = CGPoint(x:0,y:yOffset)
-        self.myTableView.contentOffset = pt
-    }
+ 
     
     func nextPlayableCellIndex()->IndexPath?{
         let nextRow = currentlyPlayingIndex.row + 1
@@ -161,33 +179,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func scrollToNextVideo(){
-        if(!isResettingCenteredIndex){
-            
-            if let _ = nextPlayableCellIndex(){
-                let offsetY = self.myTableView.contentOffset.y
-                
-                let scrollDownSmooth = InterpolationAction(from: CGFloat(offsetY),
-                                      to: CGFloat(offsetY+300),    duration: 1.3,  easing: .sineOut) {  [unowned self] in
-                                                            self.smoothScroll($0)
-                }
-                // auto trigger new movie to play
-                let endBlock = RunBlockAction {
-                    [unowned self] in
-                    self.resetVisibleIndex()
-                }
-                
-                let sequence = ActionSequence(actions:
-                    [scrollDownSmooth,
-                     endBlock ])
-                
-                scheduler.run(action: sequence)
-            }
-           
-        }
-        
-    }
-    
+   
+
     func updateCurrentIndex() -> IndexPath? {
         //when scroll end get the current display off set
         let visibleStartPoint = self.myTableView.contentOffset
@@ -209,6 +202,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func resetVisibleIndex(){
+        if (self.isDraggingDeceleratingOrTrackingAndScrolling())
+        {
+            print("aborting injecting into cell")
+            return
+        }
+        
         isResettingCenteredIndex = true
         if let idx = updateCurrentIndex(){
             if(currentlyPlayingIndex != idx){
@@ -224,10 +223,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         
                         print("displayMode:",MediaManager.shared.player?.displayMode ?? "")
                         if(MediaManager.shared.player?.displayMode != .float){
-                            MediaManager.shared.playEmbeddedVideo(url:url, embeddedContentView: cell.contentView)
+                            MediaManager.shared.playEmbeddedVideo(url:url, embeddedContentView: cell.heroImageView)
                             MediaManager.shared.player?.delegate = self
                             MediaManager.shared.player?.indexPath = currentlyPlayingIndex
-                            MediaManager.shared.player?.scrollView = myTableView
+//                            MediaManager.shared.player?.scrollView = myTableView
                         }
                     }
                 }
@@ -237,6 +236,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         isResettingCenteredIndex = false
     }
+    
+    
     
     
    func playbackFinished(_ note: Notification) {
@@ -262,22 +263,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func playMovie(indexPath:IndexPath){
+        if(currentlyPlayingIndex == indexPath){
+            print("is currently playing")
+            return
+        }
+        
         if let cell = myTableView.cellForRow(at: indexPath) as? VideoItemTableViewCell{
-            cell.contentView.backgroundColor = .red
+//            cell.contentView.backgroundColor = .red
             if let url = URL(string: urls[indexPath.row] ){
-                MediaManager.shared.playEmbeddedVideo(url:url, embeddedContentView: cell.contentView)
+                currentlyPlayingIndex = indexPath
+                MediaManager.shared.playEmbeddedVideo(url:url, embeddedContentView: cell.heroImageView)
                 MediaManager.shared.player?.delegate = self
                 MediaManager.shared.player?.indexPath = currentlyPlayingIndex
-                MediaManager.shared.player?.scrollView = myTableView
+//                MediaManager.shared.player?.scrollView = myTableView
             }
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
+        // find the player layer
+        
+        if let cell = tableView.cellForRow(at: indexPath){
+            for view in cell.subviews{
+                
+                for subView in view.subviews{
+                    if let playerLayer = subView.layer  as? AVPlayerLayer{
+                        print("we found a subView.layer")
+                        DataManager.shared.weakApexTabBarVC?.injectPlayerViewLayer(player: nil, layer: playerLayer, video: nil)
+                    }
+                }
+            }
+        }
+        
+
         self.playMovie(indexPath: indexPath)
     }
     
-
+    func invalidateCurrentlyPlayingIndex(){
+        currentlyPlayingIndex = IndexPath(row:-1,section:0)
+        
+    }
     // TODO - not working.
     func snapShotImage(){
         if let image = MediaManager.shared.player?.snapshotImage() {

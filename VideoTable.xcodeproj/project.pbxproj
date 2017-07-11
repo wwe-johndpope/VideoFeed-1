@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1710B8121F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8111F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift */; };
+		1710B8141F14032C00EF0BD0 /* ViewController+TweenKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8131F14032C00EF0BD0 /* ViewController+TweenKit.swift */; };
+		1710B8161F140AA400EF0BD0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8151F140AA400EF0BD0 /* Constants.swift */; };
+		1710B8181F140C0400EF0BD0 /* AppearanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8171F140C0400EF0BD0 /* AppearanceService.swift */; };
+		1710B8201F151D3100EF0BD0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B81F1F151D3100EF0BD0 /* DataManager.swift */; };
+		1710B8341F151DF900EF0BD0 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B82D1F151DF900EF0BD0 /* MediaManager.swift */; };
+		1710B8351F151DF900EF0BD0 /* Player+Seemless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B82E1F151DF900EF0BD0 /* Player+Seemless.swift */; };
+		1710B8361F151DF900EF0BD0 /* PlayerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B82F1F151DF900EF0BD0 /* PlayerLayout.swift */; };
+		1710B8371F151DF900EF0BD0 /* EZPlayerSkin+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8301F151DF900EF0BD0 /* EZPlayerSkin+Delegate.swift */; };
+		1710B8381F151DF900EF0BD0 /* EZPlayerCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8311F151DF900EF0BD0 /* EZPlayerCustom.swift */; };
+		1710B8391F151DF900EF0BD0 /* EZPlayerCustomSkin+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8321F151DF900EF0BD0 /* EZPlayerCustomSkin+UI.swift */; };
+		1710B83A1F151DF900EF0BD0 /* SnapkitPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8331F151DF900EF0BD0 /* SnapkitPlayerView.swift */; };
 		1743FF751EEBF0EB0046887E /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743FF741EEBF0EB0046887E /* UIFactory.swift */; };
 		1743FF771EEBF7B50046887E /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1743FF761EEBF7B50046887E /* placeholder.jpg */; };
-		1749B7201EEB5CBA00DC0057 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749B71E1EEB5CBA00DC0057 /* MediaManager.swift */; };
 		1749B7231EEB7B2F00DC0057 /* VideoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */; };
 		1749B7251EEBEE7000DC0057 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749B7241EEBEE7000DC0057 /* Extensions.swift */; };
-		17C660961EE5E111001E21E1 /* PlayerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C660951EE5E111001E21E1 /* PlayerLayout.swift */; };
 		3F58BB78DB038B6803A42BB5 /* Pods_VideoTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE821AB765A2AF2D97F79D7 /* Pods_VideoTable.framework */; };
 		84499C3E1E8D8D84007266FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84499C3D1E8D8D84007266FA /* AppDelegate.swift */; };
 		84499C401E8D8D84007266FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84499C3F1E8D8D84007266FA /* ViewController.swift */; };
@@ -45,12 +55,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1710B8111F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApexPlayerTabBarVC.swift; sourceTree = "<group>"; };
+		1710B8131F14032C00EF0BD0 /* ViewController+TweenKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TweenKit.swift"; sourceTree = "<group>"; };
+		1710B8151F140AA400EF0BD0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1710B8171F140C0400EF0BD0 /* AppearanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceService.swift; sourceTree = "<group>"; };
+		1710B81F1F151D3100EF0BD0 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1710B82D1F151DF900EF0BD0 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		1710B82E1F151DF900EF0BD0 /* Player+Seemless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+Seemless.swift"; sourceTree = "<group>"; };
+		1710B82F1F151DF900EF0BD0 /* PlayerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLayout.swift; sourceTree = "<group>"; };
+		1710B8301F151DF900EF0BD0 /* EZPlayerSkin+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EZPlayerSkin+Delegate.swift"; sourceTree = "<group>"; };
+		1710B8311F151DF900EF0BD0 /* EZPlayerCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZPlayerCustom.swift; sourceTree = "<group>"; };
+		1710B8321F151DF900EF0BD0 /* EZPlayerCustomSkin+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EZPlayerCustomSkin+UI.swift"; sourceTree = "<group>"; };
+		1710B8331F151DF900EF0BD0 /* SnapkitPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapkitPlayerView.swift; sourceTree = "<group>"; };
 		1743FF741EEBF0EB0046887E /* UIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
 		1743FF761EEBF7B50046887E /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
-		1749B71E1EEB5CBA00DC0057 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoItemTableViewCell.swift; sourceTree = "<group>"; };
 		1749B7241EEBEE7000DC0057 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		17C660951EE5E111001E21E1 /* PlayerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLayout.swift; sourceTree = "<group>"; };
 		3C1FA45300398A391F99C329 /* Pods-VideoTableUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTableUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTableUITests/Pods-VideoTableUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4D910DB378B932E205597F08 /* Pods-VideoTableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoTableTests/Pods-VideoTableTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84499C3A1E8D8D84007266FA /* VideoTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,15 +128,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1710B82C1F151DF900EF0BD0 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				1710B82D1F151DF900EF0BD0 /* MediaManager.swift */,
+				1710B82E1F151DF900EF0BD0 /* Player+Seemless.swift */,
+				1710B82F1F151DF900EF0BD0 /* PlayerLayout.swift */,
+				1710B8301F151DF900EF0BD0 /* EZPlayerSkin+Delegate.swift */,
+				1710B8311F151DF900EF0BD0 /* EZPlayerCustom.swift */,
+				1710B8321F151DF900EF0BD0 /* EZPlayerCustomSkin+UI.swift */,
+				1710B8331F151DF900EF0BD0 /* SnapkitPlayerView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		84499C311E8D8D84007266FA = {
 			isa = PBXGroup;
 			children = (
 				84499C3C1E8D8D84007266FA /* VideoTable */,
-				84499C511E8D8D84007266FA /* VideoTableTests */,
-				84499C5C1E8D8D84007266FA /* VideoTableUITests */,
-				84499C3B1E8D8D84007266FA /* Products */,
 				84499C6B1E8D8DBE007266FA /* Frameworks */,
 				8D6B96A508DDD8AA4CB1AEDB /* Pods */,
+				84499C3B1E8D8D84007266FA /* Products */,
+				84499C511E8D8D84007266FA /* VideoTableTests */,
+				84499C5C1E8D8D84007266FA /* VideoTableUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,17 +167,21 @@
 		84499C3C1E8D8D84007266FA /* VideoTable */ = {
 			isa = PBXGroup;
 			children = (
-				1743FF761EEBF7B50046887E /* placeholder.jpg */,
-				1749B71E1EEB5CBA00DC0057 /* MediaManager.swift */,
+				1710B82C1F151DF900EF0BD0 /* Player */,
+				1710B8111F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift */,
 				84499C3D1E8D8D84007266FA /* AppDelegate.swift */,
-				84499C3F1E8D8D84007266FA /* ViewController.swift */,
+				1710B8171F140C0400EF0BD0 /* AppearanceService.swift */,
 				84499C441E8D8D84007266FA /* Assets.xcassets */,
-				84499C461E8D8D84007266FA /* LaunchScreen.storyboard */,
-				84499C491E8D8D84007266FA /* Info.plist */,
-				1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */,
-				17C660951EE5E111001E21E1 /* PlayerLayout.swift */,
+				1710B8151F140AA400EF0BD0 /* Constants.swift */,
+				1710B81F1F151D3100EF0BD0 /* DataManager.swift */,
 				1749B7241EEBEE7000DC0057 /* Extensions.swift */,
+				84499C491E8D8D84007266FA /* Info.plist */,
+				84499C461E8D8D84007266FA /* LaunchScreen.storyboard */,
+				1743FF761EEBF7B50046887E /* placeholder.jpg */,
 				1743FF741EEBF0EB0046887E /* UIFactory.swift */,
+				1749B7221EEB7B2F00DC0057 /* VideoItemTableViewCell.swift */,
+				84499C3F1E8D8D84007266FA /* ViewController.swift */,
+				1710B8131F14032C00EF0BD0 /* ViewController+TweenKit.swift */,
 			);
 			path = VideoTable;
 			sourceTree = "<group>";
@@ -474,13 +512,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1710B8141F14032C00EF0BD0 /* ViewController+TweenKit.swift in Sources */,
+				1710B8351F151DF900EF0BD0 /* Player+Seemless.swift in Sources */,
+				1710B8121F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift in Sources */,
 				1749B7231EEB7B2F00DC0057 /* VideoItemTableViewCell.swift in Sources */,
 				1749B7251EEBEE7000DC0057 /* Extensions.swift in Sources */,
-				17C660961EE5E111001E21E1 /* PlayerLayout.swift in Sources */,
 				84499C401E8D8D84007266FA /* ViewController.swift in Sources */,
+				1710B8381F151DF900EF0BD0 /* EZPlayerCustom.swift in Sources */,
+				1710B83A1F151DF900EF0BD0 /* SnapkitPlayerView.swift in Sources */,
+				1710B8201F151D3100EF0BD0 /* DataManager.swift in Sources */,
+				1710B8161F140AA400EF0BD0 /* Constants.swift in Sources */,
+				1710B8391F151DF900EF0BD0 /* EZPlayerCustomSkin+UI.swift in Sources */,
+				1710B8371F151DF900EF0BD0 /* EZPlayerSkin+Delegate.swift in Sources */,
 				1743FF751EEBF0EB0046887E /* UIFactory.swift in Sources */,
 				84499C3E1E8D8D84007266FA /* AppDelegate.swift in Sources */,
-				1749B7201EEB5CBA00DC0057 /* MediaManager.swift in Sources */,
+				1710B8181F140C0400EF0BD0 /* AppearanceService.swift in Sources */,
+				1710B8361F151DF900EF0BD0 /* PlayerLayout.swift in Sources */,
+				1710B8341F151DF900EF0BD0 /* MediaManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

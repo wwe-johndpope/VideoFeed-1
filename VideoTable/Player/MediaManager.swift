@@ -1,5 +1,6 @@
 import UIKit
 import EZPlayer
+import AVFoundation
 
 struct MediaItem {
     var url: URL?
@@ -9,14 +10,18 @@ struct MediaItem {
 
 class MediaManager {
      var player: EZPlayer?
+     var transisitonPlayer: EZPlayer?
      var mediaItem: MediaItem?
      var embeddedContentView: UIView?
+  
+    weak var weakSkin:EZPlayerCustomSkin?
+    
+    
 
+    
     static let shared = MediaManager()
-    private init(){
+ 
 
-
-    }
 
     func playEmbeddedVideo(url: URL, embeddedContentView contentView: UIView? = nil, userinfo: [AnyHashable : Any]? = nil) {
         var mediaItem = MediaItem()
@@ -29,11 +34,11 @@ class MediaManager {
         //stop
         self.releasePlayer()
         
-        if let skinView = userinfo?["skin"] as? UIView{
-         self.player =  EZPlayer(controlView: skinView)
-        }else{
-          self.player = EZPlayer()
-        }
+        let skin = EZPlayerCustomSkin()
+        skin.configureForTheatreMode()
+        self.weakSkin = skin
+       // self.player = EZPlayer(controlView: skin)
+         self.player = EZPlayer()
         
         if let autoPlay = userinfo?["autoPlay"] as? Bool{
             self.player!.autoPlay = autoPlay
@@ -65,6 +70,7 @@ class MediaManager {
 
 
 
+    
     func releasePlayer(){
             self.player?.stop()
             self.player?.view.removeFromSuperview()
