@@ -10,22 +10,13 @@ import Foundation
 import AVFoundation
 
  //  setup seemless transition player
-extension ApexPlayerTabBarVC{
+extension HandoverVideoItemTableViewCell{
     
-    // called on first load
-    func configurePlayerLayerView(){
-        playVC.view.addSubview(playerView)
-        playerView.snp.remakeConstraints { (make) -> Void in
-            make.top.left.right.height.equalToSuperview()
-        }
-        playerView.backgroundColor = .purple
-        self.playerLayer = AVPlayerLayer.init(player: self.videoPlayer)
-    }
-    
+
     
     // When snapkit changes the uiview - the CA layer will be synced.
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         if(!runOnce){
             runOnce = true
             addPlayerLayerAfterViewDidLayout()
@@ -43,6 +34,7 @@ extension ApexPlayerTabBarVC{
     
     // Delay due to snapkit timing otherwise frame = .zero
     func addPlayerLayerAfterViewDidLayout(){
+        self.playerLayer = AVPlayerLayer.init(player: self.videoPlayer)
         self.playerView.configureLayer(playerLayer:self.playerLayer!)
     }
     
@@ -62,13 +54,11 @@ extension ApexPlayerTabBarVC{
         self.playerLayer = nil
         self.playerView.removeFromSuperview()
         self.playerView = SnapkitPlayerView.init(frame:.zero)
-        playVC.view.addSubview(self.playerView)
+        self.heroImageView.addSubview(self.playerView)
         playerView.snp.remakeConstraints { (make) -> Void in
             make.top.left.right.height.equalToSuperview()
         }
         self.playerLayer = AVPlayerLayer.init(player: self.videoPlayer)
-        
-        // self.presentPlayerBoxedScreen()
         
         // inject currently playing video into view
         self.playerView.configureLayer(playerLayer:layer)

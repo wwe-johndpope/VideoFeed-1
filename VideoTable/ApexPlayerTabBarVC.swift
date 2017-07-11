@@ -18,29 +18,15 @@ class ApexPlayerTabBarVC:UIViewController{
     
     let mainTBC = UITabBarController()
     
-    lazy var playVC: UIViewController = {
-        let vc = UIViewController()
+    lazy var playVC: ViewController = {
+        let vc = ViewController()
+        vc.isTheatreMode = true
         vc.view.frame = floatFrame
         return vc
     }()
     
     
-    lazy var theatreModeVC:UIViewController = {
-       let vc = UIViewController()
-        return vc
-    }()
-    
-    
-    // BEGIN - To support seemless transition of one avplayer to another
-    var runOnce = false
-    var playerLayer:AVPlayerLayer?
-    
-    var videoPlayer:AVPlayer = AVPlayer.init()
-    lazy var playerView:SnapkitPlayerView = {
-        let playerView = SnapkitPlayerView.init(frame:.zero)
-        return playerView
-    }()
-    
+
     
     
     
@@ -56,16 +42,18 @@ class ApexPlayerTabBarVC:UIViewController{
         
     
         // Add the player at top of view stack (it's initially position off screen at hiddenOrigin)
-        //playVC.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         addChildViewController(playVC)
         view.addSubview(playVC.view)
 
         
-        self.configurePlayerLayerView()
+
 
         
     }
     
+    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath,video:URL){
+        playVC.handOverPlayer(layer: layer, indexPath: indexPath,video:video)
+    }
     
         
     
