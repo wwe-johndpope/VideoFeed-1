@@ -52,6 +52,26 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // find the player layer
+        
+        if let cell = tableView.cellForRow(at: indexPath){
+            for view in cell.subviews{
+                
+                for subView in view.subviews{
+                    if let playerLayer = subView.layer  as? AVPlayerLayer{
+                        print("we found a subView.layer")
+                        DataManager.shared.weakApexTabBarVC?.handOverPlayer(player: nil, layer: playerLayer, video: nil)
+                        return
+                    }
+                }
+            }
+        }
+        
+        
+        self.playMovie(indexPath: indexPath)
+    }
     
     
 }
