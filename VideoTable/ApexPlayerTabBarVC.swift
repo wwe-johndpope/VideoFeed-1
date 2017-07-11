@@ -51,8 +51,8 @@ class ApexPlayerTabBarVC:UIViewController{
         
     }
     
-    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath,video:URL){
-        playVC.handOverPlayer(layer: layer, indexPath: indexPath,video:video)
+    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath){
+        playVC.handOverPlayer(layer: layer, indexPath: indexPath)
     }
     
         

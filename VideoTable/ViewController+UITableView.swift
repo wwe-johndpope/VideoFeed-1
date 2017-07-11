@@ -62,7 +62,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
                 for subView in view.subviews{
                     if let playerLayer = subView.layer  as? AVPlayerLayer{
                         print("we found a subView.layer")
-                        DataManager.shared.weakApexTabBarVC?.handOverPlayer(player: nil, layer: playerLayer, video: nil)
+                        DataManager.shared.weakApexTabBarVC?.handOverPlayer(layer: playerLayer,indexPath:indexPath)
                         return
                     }
                 }

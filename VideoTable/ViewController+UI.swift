@@ -103,7 +103,7 @@ class ViewController: UIViewController{
         self.resetVisibleIndex()
     }
     
-    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath,video:URL){
+    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath){
         isHandingOver = true
         handoverIndexPath = indexPath
         self.myTableView.scrollToRow(at: indexPath, at: .middle, animated: false)
