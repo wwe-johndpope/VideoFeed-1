@@ -25,3 +25,32 @@ final class UIFactory {
     }
 }
 
+class CloseButtonItem:UIBarButtonItem{
+    public convenience  init(target:  Any , action : Selector){
+        let view = CloseImageView(target: target, action: action)
+        self.init(customView: view)
+    }
+}
+
+
+class CloseImageView:UIImageView{
+    
+    public convenience  init(target:  Any , action : Selector) {
+        self.init(image: UIImage(named:"icon_close"))
+        self.addTapGesture(tapNumber: 1, target: target, action:action)
+    }
+    
+}
+
+extension UIView {
+    
+    func addTapGesture(tapNumber: Int, target: Any, action: Selector) {
+        
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.numberOfTapsRequired = tapNumber
+        addGestureRecognizer(tap)
+        isUserInteractionEnabled = true
+        
+    }
+}
+

@@ -17,18 +17,7 @@ let minimizedOrigin: CGPoint = {
 class ApexPlayerTabBarVC:UIViewController{
     
     let mainTBC = UITabBarController()
-    
-    lazy var playVC: ViewController = {
-        let vc = ViewController()
-        vc.isTheatreMode = true
-        vc.view.frame = floatFrame
-        return vc
-    }()
-    
-    
-
-    
-    
+    var customTransitionDelegate = CustomTransitionDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,23 +27,35 @@ class ApexPlayerTabBarVC:UIViewController{
         mainTBC.viewControllers = self.buildNavigationControllers()
         addChildViewController(mainTBC)
         view.addSubview(mainTBC.view)
-        
-        
-    
-        // Add the player at top of view stack (it's initially position off screen at hiddenOrigin)
-        addChildViewController(playVC)
-        view.addSubview(playVC.view)
-
-        
-
-
+        mainTBC.didMove(toParentViewController: self)
+  
         
     }
     
-    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath){
-        playVC.handOverPlayer(layer: layer, indexPath: indexPath)
+    func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath,urls:[String]){
+
+        let theatreModeVC = ViewController()
+        theatreModeVC.urls = urls
+        theatreModeVC.isTheatreMode = true
+        theatreModeVC.transitioningDelegate = customTransitionDelegate
+        let nc = UINavigationController(rootViewController: theatreModeVC)
+        nc.navigationBar.isTranslucent = false
+        theatreModeVC.navigationItem.leftBarButtonItem = CloseButtonItem(target: self, action: #selector(self.dismissVC))
+        DispatchQueue.main.async {
+            self.present(nc, animated: true) {}
+            theatreModeVC.handOverPlayer(layer: layer, indexPath: indexPath)
+        }
+ 
+        
     }
     
+    
+    func dismissVC(){
+        
+        self.dismiss(animated: true) {
+            
+        }
+    }
         
     
 

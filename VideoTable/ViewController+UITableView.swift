@@ -36,6 +36,9 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
         if (cell == nil){
             cell = VideoItemTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: VideoItemTableViewCell.ID)
         }
+        if isTheatreMode{
+            cell?.contentView.backgroundColor = .red
+        }
         cell!.indexPath = indexPath
         
 
@@ -54,23 +57,26 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // find the player layer
         
+        if isTheatreMode{
+            self.playMovie(indexPath: indexPath)
+            return
+        }
+        
+        // find the player layer
         if let cell = tableView.cellForRow(at: indexPath){
             for view in cell.subviews{
                 
                 for subView in view.subviews{
                     if let playerLayer = subView.layer  as? AVPlayerLayer{
                         print("we found a subView.layer")
-                        DataManager.shared.weakApexTabBarVC?.handOverPlayer(layer: playerLayer,indexPath:indexPath)
+                        DataManager.shared.weakApexTabBarVC?.handOverPlayer(layer: playerLayer,indexPath:indexPath,urls:urls)
                         return
                     }
                 }
             }
         }
-        
-        
-        self.playMovie(indexPath: indexPath)
+  
     }
     
     

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1702AC971F16766E0035B162 /* CustomAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702AC931F16766E0035B162 /* CustomAnimatedTransition.swift */; };
+		1702AC981F16766E0035B162 /* CustomInterectivityTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702AC941F16766E0035B162 /* CustomInterectivityTransition.swift */; };
+		1702AC991F16766E0035B162 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702AC951F16766E0035B162 /* CustomPresentationController.swift */; };
+		1702AC9A1F16766E0035B162 /* CustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702AC961F16766E0035B162 /* CustomTransitionDelegate.swift */; };
 		1710B8121F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8111F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift */; };
 		1710B8141F14032C00EF0BD0 /* ViewController+TweenKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8131F14032C00EF0BD0 /* ViewController+TweenKit.swift */; };
 		1710B8161F140AA400EF0BD0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710B8151F140AA400EF0BD0 /* Constants.swift */; };
@@ -59,6 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1702AC931F16766E0035B162 /* CustomAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimatedTransition.swift; sourceTree = "<group>"; };
+		1702AC941F16766E0035B162 /* CustomInterectivityTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterectivityTransition.swift; sourceTree = "<group>"; };
+		1702AC951F16766E0035B162 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		1702AC961F16766E0035B162 /* CustomTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionDelegate.swift; sourceTree = "<group>"; };
 		1710B8111F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApexPlayerTabBarVC.swift; sourceTree = "<group>"; };
 		1710B8131F14032C00EF0BD0 /* ViewController+TweenKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TweenKit.swift"; sourceTree = "<group>"; };
 		1710B8151F140AA400EF0BD0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -136,6 +144,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1702AC921F16766E0035B162 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				1702AC931F16766E0035B162 /* CustomAnimatedTransition.swift */,
+				1702AC941F16766E0035B162 /* CustomInterectivityTransition.swift */,
+				1702AC951F16766E0035B162 /* CustomPresentationController.swift */,
+				1702AC961F16766E0035B162 /* CustomTransitionDelegate.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		1710B82C1F151DF900EF0BD0 /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +193,7 @@
 		84499C3C1E8D8D84007266FA /* VideoTable */ = {
 			isa = PBXGroup;
 			children = (
+				1702AC921F16766E0035B162 /* Transition */,
 				1710B8111F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift */,
 				84499C3D1E8D8D84007266FA /* AppDelegate.swift */,
 				1710B8171F140C0400EF0BD0 /* AppearanceService.swift */,
@@ -319,7 +339,7 @@
 				TargetAttributes = {
 					84499C391E8D8D84007266FA = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = KL43C67G5Z;
+						DevelopmentTeam = WMDZ2CQA8K;
 						ProvisioningStyle = Automatic;
 					};
 					84499C4D1E8D8D84007266FA = {
@@ -524,12 +544,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1702AC9A1F16766E0035B162 /* CustomTransitionDelegate.swift in Sources */,
 				1720894A1F152BE7000B7962 /* HandoverVideoItemTableViewCell+Seemless.swift in Sources */,
 				1710B8141F14032C00EF0BD0 /* ViewController+TweenKit.swift in Sources */,
 				1710B8121F13FD1100EF0BD0 /* ApexPlayerTabBarVC.swift in Sources */,
 				1749B7231EEB7B2F00DC0057 /* VideoItemTableViewCell.swift in Sources */,
+				1702AC971F16766E0035B162 /* CustomAnimatedTransition.swift in Sources */,
+				1702AC981F16766E0035B162 /* CustomInterectivityTransition.swift in Sources */,
 				1749B7251EEBEE7000DC0057 /* Extensions.swift in Sources */,
 				84499C401E8D8D84007266FA /* ViewController+UI.swift in Sources */,
+				1702AC991F16766E0035B162 /* CustomPresentationController.swift in Sources */,
 				1710B8381F151DF900EF0BD0 /* EZPlayerCustom.swift in Sources */,
 				1710B83A1F151DF900EF0BD0 /* SnapkitPlayerView.swift in Sources */,
 				1720894E1F153278000B7962 /* ViewController+UITableView.swift in Sources */,
@@ -689,7 +713,7 @@
 			baseConfigurationReference = B30A3F2DA393953A255126B4 /* Pods-VideoTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KL43C67G5Z;
+				DEVELOPMENT_TEAM = WMDZ2CQA8K;
 				INFOPLIST_FILE = VideoTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.admin.VideoTable;
@@ -703,7 +727,7 @@
 			baseConfigurationReference = 8ADA74B2DEFF65A7D0364E89 /* Pods-VideoTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KL43C67G5Z;
+				DEVELOPMENT_TEAM = WMDZ2CQA8K;
 				INFOPLIST_FILE = VideoTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.admin.VideoTable;

@@ -25,6 +25,7 @@ class ViewController: UIViewController{
 
     var isResettingCenteredIndex = false
     var isTheatreMode = false
+    var handOverLayer:AVPlayerLayer?
     
     func delayedRefresh(){
         self.resetVisibleIndex()
@@ -106,15 +107,27 @@ class ViewController: UIViewController{
     func handOverPlayer(layer:AVPlayerLayer,indexPath:IndexPath){
         isHandingOver = true
         handoverIndexPath = indexPath
-        self.myTableView.scrollToRow(at: indexPath, at: .middle, animated: false)
-        self.myTableView.reloadData()
-        
-        if let cell = myTableView.cellForRow(at: indexPath) as? HandoverVideoItemTableViewCell{
-            cell.rebuildPlayerViewInjectLayer(layer: layer)
-        }
+        handOverLayer = layer
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isHandingOver{
+            if let handoverIndexPath = handoverIndexPath{
+                self.myTableView.scrollToRow(at: handoverIndexPath, at: .middle, animated: false)
+                self.myTableView.reloadData()
+                
+                if let cell = myTableView.cellForRow(at: handoverIndexPath) as? HandoverVideoItemTableViewCell{
+                    if let handOverLayer = handOverLayer{
+                        cell.rebuildPlayerViewInjectLayer(layer: handOverLayer)
+                    }
+                }
+            }
+            
+        }
+        
+        
+    }
     
     func invalidateCurrentlyPlayingIndex(){
         currentlyPlayingIndex = IndexPath(row:-1,section:0)
